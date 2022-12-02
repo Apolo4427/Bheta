@@ -59,9 +59,9 @@
                             while(consulta.next()){
                                 %>
                                 <tr>
-                                    <th><%=listaDatos.get(1)%></th>
-                                    <th><%=listaDatos.get(2)%></th>
-                                    <th><%=listaDatos.get(3)%></th>
+                                    <th><%=consulta.getString(1)%></th>
+                                    <th><%=consulta.getString(2)%></th>
+                                    <th><%=consulta.getString(3)%></th>
                                 </tr>                                 
                                 <%
                             }

@@ -52,13 +52,14 @@
                   <input type="text" name="estado" placeholder="Estado de la tarea" class="form-control">
                 </div>
                   <br>
+                  <input type="submit" class="btn btn-primary btn-block" name= "guardar" value="GUARDAR"  >
                    <%!
                     /*String titulo;
                     String descripcion;
                     String estado;
                     String nombre;*/                    
         %>
-        <%
+        <%  if (request.getParameter("guardar")!=null)
             try{
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuariostareas","root","");
@@ -77,7 +78,7 @@
                 out.println(e);
             }
         %>
-               <a href="tareas.jsp?nombre=<%=request.getParameter("nombre")%>" class="btn btn-primary btn-block" >Guardar</a>
+               <a href="tareas.jsp?nombre=<%=request.getParameter("nombre")%>" class="btn btn-primary btn-block" >volver</a>
                
               </form>
             </div>
